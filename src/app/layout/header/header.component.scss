@@ -4,7 +4,7 @@
   box-shadow: 0 13px 21px -9px rgba(34, 60, 80, 0.2);
 
   .logo {
-    margin-right: 6px;
+    margin-right: 16px;
   }
 
   .search {
@@ -15,9 +15,17 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    width: 205px;
+    margin-right: 16px;
+    margin-left: 16px;
 
     &__image {
       margin-right: 6px;
+
+      & > i {
+        font-size: 20px;
+        color: $color-gray-500;
+      }
     }
 
     & > .description__info {

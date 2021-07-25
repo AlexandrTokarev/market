@@ -1,11 +1,11 @@
 <header class="market-header">
-  <div class="container pt-2 pb-2 d-flex align-items-center justify-content-between">
+  <div class="container pt-2 pb-2 d-flex align-items-center">
     <img class="logo" src="images/logo.png" alt="Logo">
-    <input class="search form-control" [(ngModel)]="searchTerm"/>
+    <input class="search form-control" placeholder="Поиск по сайту" [(ngModel)]="searchTerm" />
 
     <div class="description">
       <div class="description__image">
-        <i class="fas fa-phone-alt fa-2x"></i>
+        <i class="fas fa-phone-alt"></i>
       </div>
       <div class="description__info">
         <span class="description__info-label">Служба доставки</span>
@@ -13,15 +13,7 @@
       </div>
     </div>
 
-    <div class="description">
-      <div class="description__image">
-        <i class="far fa-clock fa-2x"></i>
-      </div>
-      <div class="description__info">
-        <span class="description__info-label">Время работы</span>
-        <a class="description__info-text" href="javascript:void(0)"><span>пн · вс - с 10</span></a>
-      </div>
-    </div>
+    <div class="flex-grow-1"></div>
 
     <div class="description">
       <div class="description__info">
