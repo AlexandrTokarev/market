@@ -15,11 +15,13 @@
 
     <div class="flex-grow-1"></div>
 
-    <div class="description">
-      <div class="description__info">
-        <span class="description__info-label">Личный кабинет</span>
-        <a class="description__info-text" href="javascript:void(0)"><span>Корзина</span></a>
-      </div>
-    </div>
+    <button (click)="onSignIn()" class="market-header__user">
+      <i class="far fa-user"></i>
+      <span>Личный кабинет</span>
+    </button>
+
+    <button class="market-header__cart">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
   </div>
 </header>

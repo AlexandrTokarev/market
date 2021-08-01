@@ -1,5 +1,21 @@
 .page__footer {
   width: 100%;
   height: 120px;
-  background-color: #a5d6a7;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    height: 100%;
+  }
+  .footer__info {
+    flex-grow: 1;
+    padding: 38px 0;
+  }
+  .footer__floor {
+    background-color: #232323;
+    height: 58px;
+    width: 100%;
+  }
 }

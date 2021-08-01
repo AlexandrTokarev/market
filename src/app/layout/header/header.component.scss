@@ -1,14 +1,16 @@
 @import "src/theme/variables";
+@import "src/theme/typography";
 
 .market-header {
   box-shadow: 0 13px 21px -9px rgba(34, 60, 80, 0.2);
+  @include text-15;
 
   .logo {
     margin-right: 16px;
   }
 
   .search {
-    max-width: 250px;
+    max-width: 270px;
   }
 
   .description {
@@ -16,8 +18,8 @@
     flex-wrap: nowrap;
     align-items: center;
     width: 205px;
-    margin-right: 16px;
-    margin-left: 16px;
+    margin-right: 24px;
+    margin-left: 24px;
 
     &__image {
       margin-right: 6px;
@@ -35,10 +37,58 @@
       .description__info-label {
 
       }
+
       .description__info-text {
         text-decoration: none;
         color: $color-gray-500;
       }
+    }
+  }
+
+  .market-header__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: $color-gray-200;
+    }
+  }
+
+  .market-header__cart {
+    padding: 10px;
+    width: 53px;
+    height: 53px;
+    min-width: 53px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    transition: background-color 0.2s;
+    background-color: $color-orange-100;
+
+    & > i {
+      color: $color-gray-500;
+    }
+
+    &:hover {
+      background-color: $color-orange-200;
+    }
+
+  }
+}
+
+@media (max-width: 1200px) {
+  .market-header {
+    .description {
+      display: none;
     }
   }
 }

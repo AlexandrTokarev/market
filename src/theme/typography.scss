@@ -1,0 +1,23 @@
+
+@mixin text-18 {
+  font-size: 18px;
+  line-height: 26px;
+}
+@mixin text-16 {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin text-15 {
+  font-size: 15px;
+  line-height: 22px;
+}
+@mixin text-14 {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+@mixin text-12 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
