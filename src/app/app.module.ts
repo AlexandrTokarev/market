@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { SignInComponent } from './dialogs/sign-in/sign-in.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderNavbarComponent } from './layout/header-navbar/header-navbar.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
 	declarations: [
@@ -18,7 +20,8 @@ import { HeaderNavbarComponent } from './layout/header-navbar/header-navbar.comp
 		SkeletonComponent,
 		FooterComponent,
 		SignInComponent,
-		HeaderNavbarComponent
+		HeaderNavbarComponent,
+		CartComponent
 	],
 	imports: [
 		BrowserModule,
@@ -26,7 +29,7 @@ import { HeaderNavbarComponent } from './layout/header-navbar/header-navbar.comp
 		FormsModule,
 		NgbModule
 	],
-	providers: [],
+	providers: [CartService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {

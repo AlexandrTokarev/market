@@ -1,0 +1,37 @@
+@import "src/theme/variables";
+
+.cart {
+  padding: 10px;
+  width: 53px;
+  height: 53px;
+  min-width: 53px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  transition: background-color 0.2s;
+  background-color: $color-orange-100;
+
+  &::after {
+    content: none;
+  }
+  & > i {
+    color: $color-gray-500;
+  }
+
+  &:hover {
+    background-color: $color-orange-200;
+  }
+}
+
+.cart__list {
+  width: 350px;
+
+  &.has-value {
+    width: 450px;
+  }
+
+  .cart__list-item {
+    padding: 5px 8px;
+  }
+}
+

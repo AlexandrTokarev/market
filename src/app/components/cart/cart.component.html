@@ -1,0 +1,17 @@
+<div ngbDropdown #myDrop="ngbDropdown" [placement]="'bottom-right'">
+	<button class="cart" ngbDropdownToggle>
+		<i class="fas fa-shopping-cart"></i>
+	</button>
+
+	<div class="dropdown-menu cart__list" [class.has-value]="cart.lines.length" ngbDropdownMenu>
+		<div class="cart__list-item" *ngIf="cart.lines.length === 0">
+			Корзина пуста
+		</div>
+		<ng-container *ngIf="cart.lines.length > 0">
+			<div class="cart__list-item" *ngFor="let line of cart.lines">
+				<span>{{ line.product.name }}</span>
+			</div>
+		</ng-container>
+	</div>
+</div>
+

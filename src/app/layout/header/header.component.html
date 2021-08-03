@@ -1,27 +1,25 @@
 <header class="market-header">
-  <div class="container pt-2 pb-2 d-flex align-items-center">
-    <img class="logo" src="images/logo.png" alt="Logo">
-    <input class="search form-control" placeholder="Поиск по сайту" [(ngModel)]="searchTerm" />
+	<div class="container pt-2 pb-2 d-flex align-items-center">
+		<img class="logo" src="images/logo.png" alt="Logo">
+		<input class="search form-control" placeholder="Поиск по сайту" [(ngModel)]="searchTerm" />
 
-    <div class="description">
-      <div class="description__image">
-        <i class="fas fa-phone-alt"></i>
-      </div>
-      <div class="description__info">
-        <span class="description__info-label">Служба доставки</span>
-        <a class="description__info-text" href="tel:+78005553535"><span>+7 (800) 555-35-35</span></a>
-      </div>
-    </div>
+		<div class="description">
+			<div class="description__image">
+				<i class="fas fa-phone-alt"></i>
+			</div>
+			<div class="description__info">
+				<span class="description__info-label">Служба доставки</span>
+				<a class="description__info-text" href="tel:+78005553535"><span>+7 (800) 555-35-35</span></a>
+			</div>
+		</div>
 
-    <div class="flex-grow-1"></div>
+		<div class="flex-grow-1"></div>
 
-    <button (click)="onSignIn()" class="market-header__user">
-      <i class="far fa-user"></i>
-      <span>Личный кабинет</span>
-    </button>
+		<button (click)="onSignIn()" class="market-header__user">
+			<i class="far fa-user"></i>
+			<span>Личный кабинет</span>
+		</button>
 
-    <button class="market-header__cart">
-      <i class="fas fa-shopping-cart"></i>
-    </button>
-  </div>
+		<app-cart></app-cart>
+	</div>
 </header>

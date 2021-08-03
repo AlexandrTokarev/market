@@ -6,3 +6,33 @@
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.dropdown-menu {
+  margin-top: 0.25rem;
+  animation: 100ms slide-up ease-out;
+}
+
+@keyframes slide-up {
+  from {
+    top: 0;
+    margin-top: 1rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    margin-top: 0.25rem;
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  from {
+    margin-top: 0;
+    top: -1rem;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    top: 0.125rem;
+    opacity: 1;
+  }
+}
