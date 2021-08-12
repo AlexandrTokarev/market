@@ -3,11 +3,11 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
 	selector: 'app-sign-in',
-	templateUrl: './sign-in.component.html',
-	styleUrls: ['./sign-in.component.scss'],
+	templateUrl: './sign-in-dialog.component.html',
+	styleUrls: ['./sign-in-dialog.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SignInComponent implements OnInit {
+export class SignInDialogComponent implements OnInit {
 
 	constructor(public activeModal: NgbActiveModal) {
 	}

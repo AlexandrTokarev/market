@@ -38,6 +38,10 @@
       &:hover {
         color: $color-orange-300;
       }
+
+      &.active {
+        color: $color-orange-500;
+      }
     }
   }
 }

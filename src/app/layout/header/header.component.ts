@@ -1,6 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { SignInComponent } from '../../dialogs/sign-in/sign-in.component';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {DialogsService} from "../../dialogs/dialogs.service";
 
 @Component({
 	selector: 'app-header',
@@ -12,7 +11,7 @@ export class HeaderComponent implements OnInit {
 	searchTerm = '';
 
 	constructor(
-		private modalService: NgbModal
+		private dialogsService: DialogsService
 	) {
 	}
 
@@ -20,11 +19,7 @@ export class HeaderComponent implements OnInit {
 	}
 
 	onSignIn() {
-		this.modalService.open(SignInComponent).result.then((result) => {
-			console.log(`Closed with: ${result}`);
-		}, (reason) => {
-			console.log(`Dismissed ${reason}`);
-		});
+		this.dialogsService.signIn()
 	}
 
 }
