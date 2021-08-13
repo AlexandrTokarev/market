@@ -1,10 +1,99 @@
 <footer class="page__footer">
 	<section class="footer__info">
 		<div class="container">
-			Footer
+			<div class="d-flex justify-content-between">
+				<div>
+					<img src="images/logo_footer.svg" alt="logo-footer">
+				</div>
+				<div>
+					<ul ngbNav>
+						<li [ngbNavItem]="0">
+							<a ngbNavLink routerLink="/">О компании</a>
+						</li>
+						<li [ngbNavItem]="1">
+							<a ngbNavLink routerLink="/">Новости</a>
+						</li>
+						<li [ngbNavItem]="2">
+							<a ngbNavLink routerLink="/">Фотоотчеты</a>
+						</li>
+						<li [ngbNavItem]="3">
+							<a ngbNavLink routerLink="/">Отзывы</a>
+						</li>
+						<li [ngbNavItem]="4">
+							<a ngbNavLink routerLink="/">Поставщикам</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul ngbNav>
+						<li [ngbNavItem]="0">
+							<a ngbNavLink routerLink="/">Франчайзинг</a>
+						</li>
+						<li [ngbNavItem]="1">
+							<a ngbNavLink routerLink="/">Условия доставки</a>
+						</li>
+						<li [ngbNavItem]="2">
+							<a ngbNavLink routerLink="/">Реквизиты</a>
+						</li>
+						<li [ngbNavItem]="3">
+							<a ngbNavLink routerLink="/">Условия публичной оферты</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<div class="description">
+						<div class="description__image">
+							<i class="fas fa-medal"></i>
+						</div>
+						<div class="description__info">
+							<span class="description__info-label">Служба качества</span>
+							<a class="description__info-text" href="tel:+73812910250"><span>+7 (3812) 91-02-50</span></a>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="description__image">
+							<i class="fas fa-phone-alt"></i>
+						</div>
+						<div class="description__info">
+							<span class="description__info-label">Служба доставки</span>
+							<a class="description__info-text" href="tel:+78005553535"><span>+7 (800) 555-35-35</span></a>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="description__image">
+							<i class="fas fa-clock"></i>
+						</div>
+						<div class="description__info">
+							<span class="description__info-label">Время работы</span>
+							<span class="description__info-text">пн - вс: с 10:00</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<section class="footer__floor">
-
+	<section class="footer__floor-container">
+		<div class="container footer__floor">
+			<div class="footer__floor-section">
+				© 2021 ШашлыкоFF
+			</div>
+			<div class="footer__floor-section">
+				<span style="margin-right: 10px">Мы в соцсетях</span>
+				<a href="https://vk.com/shashlikoff_omsk" class="social-logo" target="_blank" rel="noopener">
+					<img src="images/icon-vk.png" alt="vk">
+				</a>
+				<a href="https://www.instagram.com/shashlikoff_omsk/" class="social-logo" target="_blank" rel="noopener">
+					<img class="social-logo" src="images/icon-inst.png" alt="inst">
+				</a>
+			</div>
+			<div class="footer__floor-section">
+				<img src="images/footer-payments.png" alt="payments">
+			</div>
+			<div class="footer__floor-section" style="color: #878b8e">
+				Разработано <i>by Maestro</i>
+			</div>
+		</div>
 	</section>
 </footer>

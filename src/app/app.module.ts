@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RouterModule, Routes} from "@angular/router";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {IMaskModule} from 'angular-imask';
 
 // Layout
 import {HeaderComponent} from './layout/header/header.component';
@@ -47,7 +48,8 @@ const routes: Routes = [
 		AppRoutingModule,
 		FormsModule,
 		NgbModule,
-		RouterModule.forRoot(routes)
+		RouterModule.forRoot(routes),
+		IMaskModule
 	],
 	providers: [CartService],
 	bootstrap: [AppComponent]
