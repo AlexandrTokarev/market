@@ -1,1 +1,12 @@
-<p>menu-page works!</p>
+
+<nav class="categories-navbar">
+	<ul ngbNav class="nav container">
+		<li class="nav-item" *ngFor="let categorie of productCategories; index as i" [ngbNavItem]="i">
+			<a ngbNavLink routerLink="{{categorie.name}}" routerLinkActive="active">
+				<span>{{ categorie.description }}</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+
