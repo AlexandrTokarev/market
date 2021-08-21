@@ -27,4 +27,7 @@ export class ProductService {
 	getCategories(): Observable<AppTypes.Schemas.Category[]> {
 		return of(this.categories).pipe(delay(120));
 	}
+	getCategory(name: string): AppTypes.Schemas.Category | undefined {
+		return this.categories.find(c => c.name === name);
+	}
 }

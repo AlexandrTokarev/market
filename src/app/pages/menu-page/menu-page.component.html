@@ -1,5 +1,5 @@
 
-<nav class="categories-navbar">
+<nav class="menu-page__navbar">
 	<ul ngbNav class="nav container">
 		<li class="nav-item" *ngFor="let categorie of productCategories; index as i" [ngbNavItem]="i">
 			<a ngbNavLink routerLink="{{categorie.name}}" routerLinkActive="active">
@@ -8,5 +8,9 @@
 		</li>
 	</ul>
 </nav>
+<div class="menu-page__content container">
+	<router-outlet></router-outlet>
+</div>
+
 
 

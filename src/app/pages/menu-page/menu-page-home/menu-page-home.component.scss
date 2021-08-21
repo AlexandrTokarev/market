@@ -1,0 +1,14 @@
+@import "src/theme/typography";
+@import "src/theme/variables";
+
+section {
+  @include text-18;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
