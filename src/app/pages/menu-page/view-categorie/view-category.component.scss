@@ -1,0 +1,25 @@
+@import "src/theme/variables";
+
+.subcategories__container {
+  margin: 4px 0;
+
+  .subcategories__btn {
+    padding: 4px 18px;
+    border: none;
+    outline: 0;
+    border-radius: 16px;
+    font-size: 15px;
+    margin-right: 8px;
+    letter-spacing: 0.4px;
+    background-color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-orange-200;
+    }
+    &.active {
+      background-color: $color-orange-400;
+    }
+  }
+}
+

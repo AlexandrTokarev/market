@@ -6,25 +6,94 @@ import { Product } from '../model/product.model';
 	providedIn: 'root'
 })
 export class StaticDataSource {
-	private products: Product[] = [
-		new Product(1, 'Product 1', 'Category 1', 'Product 1 (Category 1)', 100),
-		new Product(2, 'Product 2', 'Category 1', 'Product 2 (Category 1)', 100),
-		new Product(3, 'Product 3', 'Category 1', 'Product 3 (Category 1)', 100),
-		new Product(4, 'Product 4', 'Category 1', 'Product 4 (Category 1)', 100),
-		new Product(5, 'Product 5', 'Category 1', 'Product 5 (Category 1)', 100),
-		new Product(6, 'Product 6', 'Category 2', 'Product 6 (Category 2)', 100),
-		new Product(7, 'Product 7', 'Category 2', 'Product 7 (Category 2)', 100),
-		new Product(8, 'Product 8', 'Category 2', 'Product 8 (Category 2)', 100),
-		new Product(9, 'Product 9', 'Category 2', 'Product 9 (Category 2)', 100),
-		new Product(10, 'Product 10', 'Category 2', 'Product 10 (Category 2)', 100),
-		new Product(11, 'Product 11', 'Category 3', 'Product 11 (Category 3)', 100),
-		new Product(12, 'Product 12', 'Category 3', 'Product 12 (Category 3)', 100),
-		new Product(13, 'Product 13', 'Category 3', 'Product 13 (Category 3)', 100),
-		new Product(14, 'Product 14', 'Category 3', 'Product 14 (Category 3)', 100),
-		new Product(15, 'Product 15', 'Category 3', 'Product 15 (Category 3)', 100),
+	private products: AppTypes.Schemas.Product[] = [
+		// Супы
+		new Product(1,
+			'Сырный суп',
+			[8],
+			'Суп-пюре на основе сыра – сама нежность. Куриное филе отличное дополнение к сливочному вкусу. Приправлен шампанским. Подается с сухариками',
+			100,
+			0
+		),
+		new Product(2,
+			'Борщ по-сибирски',
+			[8],
+			'Этот борщ позволит почувствовать себя как дома! Оцените оригинальную подачу с шашлычком из курицы, хлебом, грудинкой, сметаной и горчицей',
+			100,
+			0
+		),
+		new Product(3,
+			'Сухарики',
+			[8],
+			'Сухарики',
+			100,
+			0),
+		new Product(4,
+			'Тайский суп Том Ям',
+			[8],
+			'Ностальгия по отпуску, проведенному в Азии? Острый тайский суп на курином бульоне с овощами позволит вернуться в жаркие дни у моря',
+			100,
+			0
+		),
+		new Product(5,
+			'Норвежский суп',
+			[8],
+			'Насыщенный сливочным вкусом овощной суп с семгой',
+			100,
+			0
+		),
+		new Product(6,
+			'Сырный суп (no alcohol)',
+			[8],
+			'Суп-пюре на основе сыра – сама нежность. Куриное филе отличное дополнение к сливочному вкусу. Подается с сухариками. Теперь и без добавления шампанского',
+			100,
+			0),
+		new Product(7,
+			'Окрошка классическая',
+			[8],
+			'Окрошка с ветчиной. Подаётся с  хреном, горчицей и сметаной.',
+			100,
+			0
+		),
+		new Product(8,
+			'Окрошка с говядиной',
+			[8],
+			'Окрошка с говядиной. Подаётся с хреном, горчицей и сметаной',
+			100,
+			0
+		),
+		new Product(9,
+			'Солянка',
+			[8],
+			'Густая и сытная, по традиционному рецепту русcкой кухни, сдобренная сметаной – прекрасное начало обеда для тех, кто хорошо потрудился с утра',
+			100,
+			0
+		),
+		new Product(10,
+			'Суп Летний',
+			[8],
+			'Ароматный супчик, с кусочками курицы, расцвеченный крупно нарезанной морковкой',
+			100,
+			0
+		),
+		new Product(11,
+			'Французский луковый суп',
+			[8],
+			'Густой, ароматный, вкусный бульон с луком, сливками, сыром, корицей и специями. Дополняет блюдо хрустящий багет',
+			100,
+			0
+		),
+
+		// Салаты
+		new Product(12, 'Product 1', [], 'Product 1 (Category 1)', 100, 0),
+		new Product(13, 'Product 1', [], 'Product 1 (Category 1)', 100, 0),
+		new Product(14, 'Product 1', [], 'Product 1 (Category 1)', 100, 0),
+		new Product(15, 'Product 1', [], 'Product 1 (Category 1)', 100, 0),
+		new Product(16, 'Product 1', [], 'Product 1 (Category 1)', 100, 0),
+		new Product(17, 'Product 1', [], 'Product 1 (Category 1)', 100, 0),
 	];
 
-	getProducts(): Observable<Product[]> {
+	getProducts(): Observable<AppTypes.Schemas.Product[]> {
 		return from([this.products]);
 	}
 }

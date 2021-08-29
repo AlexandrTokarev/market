@@ -1,0 +1,10 @@
+<ng-container *ngIf="product">
+	<div class="product__card">
+		<div class="product__title">{{ product.name }}</div>
+		<img src="" alt="{{ product.name }}" width="260" height="195"/>
+		<div class="product__description" [title]="product.description">{{ product.description }}</div>
+		<hr class="product__hr">
+		<div class="product__price">{{ product.price }} руб.</div>
+	</div>
+</ng-container>
+

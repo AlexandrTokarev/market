@@ -1,9 +1,10 @@
-export class Product {
+export class Product implements AppTypes.Schemas.Product {
 	constructor(
 		public id: number,
 		public name: string,
-		public category: string,
-		public description?: string,
-		public price?: number
+		public categoryIds: number[],
+		public description: string,
+		public price: number,
+		public discount: number,
 	) { }
 }

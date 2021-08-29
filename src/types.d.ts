@@ -6,7 +6,7 @@ declare namespace AppTypes {
 			description: string | null;
 			price: number | null;
 			discount: number | null;
-			categories: Category[];
+			categoryIds: number[];
 		}
 		export interface Category {
 			id: number;

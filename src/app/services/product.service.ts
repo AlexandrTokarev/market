@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../model/product.model';
 import { StaticDataSource } from './static.datasource';
 import { categories } from '../data/categories';
 import { Observable, of } from 'rxjs';
@@ -9,7 +8,7 @@ import { delay } from 'rxjs/internal/operators';
 	providedIn: 'root'
 })
 export class ProductService {
-	private products: Product[] = [];
+	private products: AppTypes.Schemas.Product[] = [];
 	private categories: AppTypes.Schemas.Category[] = [];
 
 	constructor(private dataSource: StaticDataSource) {
@@ -18,10 +17,10 @@ export class ProductService {
 			this.categories = categories;
 		});
 	}
-	getProducts(category: string | null = null): Product[] {
-		return this.products.filter(p => category == null || category === p.category);
+	getProducts(categoryId: number): AppTypes.Schemas.Product[] {
+		return this.products.filter(p => p.categoryIds.includes(categoryId));
 	}
-	getProduct(id: number): Product | undefined {
+	getProduct(id: number): AppTypes.Schemas.Product | undefined {
 		return this.products.find(p => p.id === id);
 	}
 	getCategories(): Observable<AppTypes.Schemas.Category[]> {

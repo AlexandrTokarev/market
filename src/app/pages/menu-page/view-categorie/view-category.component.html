@@ -1,5 +1,21 @@
-<h3>{{ category?.description }}</h3>
+<ng-container *ngIf="category">
+	<h3>{{ category.description }}</h3>
 
-<span *ngFor="let subCat of category?.subCategories">
-	{{ subCat.description }}
-</span>
+	<div class="subcategories__container" *ngIf="category.subCategories?.length">
+		<button class="subcategories__btn" [class.active]="selectedCategoryId === category.id" (click)="selectSubCat(category.id)">Все</button>
+		<button
+			class="subcategories__btn"
+			[class.active]="subCat.id === selectedCategoryId"
+			*ngFor="let subCat of category.subCategories"
+			(click)="selectSubCat(subCat.id)"
+		>
+			{{ subCat.description }}
+		</button>
+	</div>
+
+	<app-products-list
+		[categoryId]="selectedCategoryId"
+	></app-products-list>
+</ng-container>
+
+

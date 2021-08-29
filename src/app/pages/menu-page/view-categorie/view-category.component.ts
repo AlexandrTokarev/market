@@ -1,6 +1,8 @@
-import {Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {ProductService} from "../../../services/product.service";
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { ProductService } from '../../../services/product.service';
 
 @Component({
 	selector: 'app-view-category',
@@ -8,8 +10,11 @@ import {ProductService} from "../../../services/product.service";
 	styleUrls: ['./view-category.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ViewCategoryComponent implements OnInit {
+export class ViewCategoryComponent implements OnInit, OnDestroy {
 	category: AppTypes.Schemas.Category | undefined;
+	selectedCategoryId = 0;
+
+	private destroy$ = new Subject<void>();
 
 	constructor(
 		private activeRoute: ActivatedRoute,
@@ -19,10 +24,23 @@ export class ViewCategoryComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.activeRoute.params.subscribe(routeParams => {
-			this.category = this.productService.getCategory(routeParams['name']);
-			this.changeDetector.detectChanges();
-		});
+		this.activeRoute.params
+			.pipe(takeUntil(this.destroy$))
+			.subscribe(routeParams => {
+				this.category = this.productService.getCategory(routeParams.name);
+				if (this.category) {
+					this.selectedCategoryId = this.category.id;
+				}
+				this.changeDetector.detectChanges();
+			});
+	}
+
+	ngOnDestroy() {
+		this.destroy$.next();
+	}
+
+	selectSubCat(name: number) {
+		this.selectedCategoryId = name;
 	}
 
 }

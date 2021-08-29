@@ -1,0 +1,8 @@
+<div *ngIf="products.length === 0">Ничего не найдено</div>
+
+<div class="d-flex" style="flex-wrap: wrap">
+	<app-product-card
+		*ngFor="let product of products; trackBy: trackByProduct"
+		[product]="product"
+	></app-product-card>
+</div>
