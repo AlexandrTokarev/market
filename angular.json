@@ -33,6 +33,11 @@
                 "glob": "**/*",
                 "input": "src/assets/images",
                 "output": "/images"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/images/soups",
+                "output": "/images/soups"
               }
             ],
             "styles": [

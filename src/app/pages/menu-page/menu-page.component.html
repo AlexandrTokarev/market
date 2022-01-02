@@ -1,8 +1,8 @@
 <nav class="menu-page__navbar">
 	<ul ngbNav class="nav container">
-		<li class="nav-item" *ngFor="let categorie of productCategories; index as i" [ngbNavItem]="i">
-			<a ngbNavLink routerLink="{{categorie.name}}" routerLinkActive="active">
-				<span>{{ categorie.description }}</span>
+		<li class="nav-item" *ngFor="let category of productCategories; index as i" [ngbNavItem]="i">
+			<a ngbNavLink routerLink="{{category.name}}" routerLinkActive="active">
+				<span>{{ category.description }}</span>
 			</a>
 		</li>
 	</ul>

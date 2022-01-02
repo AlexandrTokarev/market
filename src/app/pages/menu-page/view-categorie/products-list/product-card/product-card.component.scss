@@ -44,4 +44,7 @@
     height: 3px;
     color: $color-gray-400;
   }
+  .no-img {
+    filter: opacity(0.2);
+  }
 }

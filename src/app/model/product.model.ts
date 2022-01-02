@@ -6,5 +6,6 @@ export class Product implements AppTypes.Schemas.Product {
 		public description: string,
 		public price: number,
 		public discount: number,
+		public image?: string,
 	) { }
 }

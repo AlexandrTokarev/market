@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges, TrackByFunction } from '@angular/core';
 import { ProductService } from '../../../../services/product.service';
 
 @Component({
@@ -27,6 +27,6 @@ export class ProductsListComponent implements OnInit, OnChanges {
 		console.log('Name', changes);
 	}
 
-	trackByProduct = (index: number, item: AppTypes.Schemas.Product) => item.id;
+	trackByProduct: TrackByFunction<AppTypes.Schemas.Product> = (index, item) => item.id;
 
 }

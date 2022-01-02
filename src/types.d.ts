@@ -7,6 +7,7 @@ declare namespace AppTypes {
 			price: number | null;
 			discount: number | null;
 			categoryIds: number[];
+			image?: string;
 		}
 		export interface Category {
 			id: number;
