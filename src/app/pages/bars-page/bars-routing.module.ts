@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AngularYandexMapsModule, YaConfig } from 'angular8-yandex-maps';
 import { BarsPageComponent } from './bars-page.component';
 
 const routes: Routes = [
 	{ path: '', component: BarsPageComponent }
 ];
 
-const mapConfig: YaConfig = {
-	apikey: 'API_KEY',
-	lang: 'en_US',
-};
-
 @NgModule({
 	imports: [
+		CommonModule,
 		RouterModule.forChild(routes),
-		AngularYandexMapsModule.forRoot(mapConfig)
 	],
 	exports: [RouterModule],
 	declarations: [

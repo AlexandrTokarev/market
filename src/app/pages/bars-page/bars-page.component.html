@@ -1,5 +1,11 @@
 <div class="container">
-	<ya-map [center]="[55.751952, 37.600739]" [zoom]="12">
-		<ya-placemark [geometry]="[55.751952, 37.600739]"></ya-placemark>
-	</ya-map>
+	<h1 class="mt-2">Гриль бары</h1>
+
+	<section class="row">
+		<div class="col-6" *ngFor="let address of addresses">
+			{{ address.street }}
+		</div>
+	</section>
+
+	<img src="images/ya-map.png" alt="" class="mb-4">
 </div>
